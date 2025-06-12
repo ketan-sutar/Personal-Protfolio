@@ -7,11 +7,12 @@ import Contactsection from "./components/Contact";
 
 export default function Home() {
   return (
-    <div>
+    <div className="scroll-smooth">
       <Homesection />
+      <Aboutsection />
       <Worksection />
       <Skillsection />
-      <Aboutsection />
+
       <Contactsection />
     </div>
   );
