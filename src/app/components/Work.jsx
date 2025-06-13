@@ -18,8 +18,11 @@ const Work = () => {
       {/* Card Container */}
       <div className="flex flex-wrap justify-center gap-8">
         <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
         {/* You can duplicate <ProjectCard /> or map through a project array here */}
       </div>
+      <div>See more ➡️</div>
     </section>
   );
 };

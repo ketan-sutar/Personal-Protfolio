@@ -1,67 +1,45 @@
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+// components/ProjectCard.js
+import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 
 const ProjectCard = () => {
   return (
-    <Card className="relative w-full max-w-2xl rounded-3xl overflow-hidden shadow-xl">
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/3441c752-82eb-4e49-835e-87ae8fa40818.png')",
-        }}
-      ></div>
+    <div className="bg-gradient-to-br from-[#1f2a48] to-[#2c3e50] text-white p-8 rounded-3xl shadow-xl max-w-3xl mx-auto transform ">
+      <h2 className="text-2xl font-bold mb-1 text-center">
+        E-Commerce Platform
+      </h2>
+      <p className="text-sm text-gray-300 text-center mb-4">
+        FULL STACK DEVELOPMENT
+      </p>
 
-      {/* Overlay with blur and color */}
-      <div className="relative z-10 bg-black/60 backdrop-blur-lg w-full h-full p-8">
-        <CardHeader className="text-center">
-          <CardTitle className="text-3xl text-white font-bold">
-            E-Commerce Platform
-          </CardTitle>
-          <CardDescription className="uppercase text-sm tracking-widest text-gray-300">
-            Full Stack Development
-          </CardDescription>
-          <CardAction className="mt-4 flex flex-wrap gap-3 justify-center">
-            {["React", "Node.js", "MongoDB", "Stripe"].map((tech) => (
-              <span
-                key={tech}
-                className="text-sm px-3 py-1 bg-white/10 border border-white/20 text-white rounded-full"
-              >
-                {tech}
-              </span>
-            ))}
-          </CardAction>
-        </CardHeader>
-
-        <CardFooter className="flex flex-col gap-4 mt-6">
-          <a
-            href="#"
-            className="flex items-center justify-center gap-2 w-full px-4 py-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-colors duration-300"
-            aria-label="View GitHub Repository"
+      <div className="flex flex-wrap justify-center gap-2 mb-6">
+        {["React", "Node.js", "MongoDB", "Stripe"].map((tech) => (
+          <span
+            key={tech}
+            className="bg-[#374151] text-sm px-3 py-1 rounded-full text-white"
           >
-            <i className="fa-brands fa-github"></i> GitHub
-          </a>
-          <a
-            href="#"
-            className="flex items-center justify-center gap-2 w-full px-4 py-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-colors duration-300"
-            aria-label="View Live Demo"
-          >
-            <i className="fa-solid fa-up-right-from-square"></i> Live Demo
-          </a>
-        </CardFooter>
+            {tech}
+          </span>
+        ))}
       </div>
 
-      {/* Dark overlay under content */}
-      <div className="absolute inset-0 bg-black opacity-40"></div>
-    </Card>
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="#"
+          className="flex items-center gap-2 px-6 py-2 border border-white rounded-full hover:bg-white hover:text-black transition"
+        >
+          <FaGithub />
+          GitHub
+        </a>
+        <a
+          href="#"
+          className="flex items-center gap-2 px-6 py-2 border border-white rounded-full hover:bg-white hover:text-black transition"
+        >
+          <FiExternalLink />
+          Live Demo
+        </a>
+      </div>
+    </div>
   );
 };
 

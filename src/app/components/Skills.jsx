@@ -65,3 +65,5 @@ const Skills = () => {
 };
 
 export default Skills;
+
+// ya mdhe glow efeftc add krycha try karu ntr
