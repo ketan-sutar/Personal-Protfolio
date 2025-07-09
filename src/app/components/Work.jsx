@@ -29,25 +29,25 @@ const Work = () => {
   return (
     <section
       id="work"
-      className="min-h-screen bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 flex flex-col items-center justify-center px-4 py-24"
+      className="min-h-auto bg-grey-800 flex flex-col items-center justify-center px-4 py-24"
     >
       {/* Section Heading */}
       <div className="text-center mb-16">
         <h2 className="text-5xl md:text-6xl font-extrabold mb-4 text-white drop-shadow-lg tracking-tight">
           <span className="bg-gradient-to-r from-sky-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
-            My Projects
+            Projects
           </span>
         </h2>
-        <p className="text-lg text-gray-300">
-          Here are some of the projects I’ve worked on recently.
-        </p>
+
         <div className="mx-auto mt-4 w-24 h-1 bg-gradient-to-r from-sky-400 via-cyan-400 to-green-400 rounded-full shadow-lg" />
       </div>
 
       {/* Card Container */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-6xl mb-10">
         {projects.map((project, idx) => (
-          <ProjectCard key={idx} {...project} />
+          <div key={idx} className="min-h-[400px] h-full">
+            <ProjectCard {...project} />
+          </div>
         ))}
       </div>
       <a

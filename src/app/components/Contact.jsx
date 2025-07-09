@@ -1,30 +1,43 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import React from "react";
-import ContactForm from "./ContactForm";
-import {
-  FaLinkedin,
-  FaInstagram,
-  FaFacebook,
-  FaTelegram,
-  FaTwitter,
-  FaSkype,
-  FaGoogle,
-} from "react-icons/fa";
+import { useRouter } from "next/navigation";
+import { FaLinkedin, FaGoogle } from "react-icons/fa";
 
 const Contact = () => {
+  const router = useRouter();
+
   return (
     <div>
       <section
         id="contact"
         className="min-h-screen flex flex-col items-center justify-center bg-black text-white px-4 py-16"
       >
-        <div className="text-center">
-          <h2 className="text-4xl font-extrabold mb-8 text-yellow-400">
-            Connect With Me
-          </h2>
+        {/* Main CTA Text */}
+        <div className="text-center mb-12">
+          <p className="text-2xl sm:text-3xl font-semibold text-gray-200 max-w-2xl mx-auto leading-relaxed">
+            Got an idea or want to start a new project? Let’s collaborate and
+            make something great together.
+          </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 max-w-3xl">
+        {/* Divider with Get in Touch Button */}
+        <div className="relative w-full max-w-2xl flex items-center justify-center my-6">
+          <hr className="w-full border-gray-600" />
+          <Button
+            className="absolute right-0 transform translate-y-1/2 px-6 py-2 bg-yellow-500 text-black font-semibold rounded-full shadow hover:bg-yellow-600 transition"
+            onClick={() => router.push("/contactform")}  // <-- navigate here
+          >
+            Get In Touch
+          </Button>
+        </div>
+
+        {/* Social Buttons */}
+        <div
+          id="contact-links"
+          className="flex flex-wrap justify-center gap-4 mt-10"
+        >
           {/* LinkedIn */}
           <Button
             asChild
@@ -41,18 +54,6 @@ const Contact = () => {
             </a>
           </Button>
 
-          {/* Instagram */}
-          <Button
-            asChild
-            variant="outline"
-            className="flex items-center gap-2 px-5 py-2 rounded-full bg-white text-pink-600 font-semibold shadow hover:scale-105 transition"
-          >
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <FaInstagram className="text-xl" />
-              Instagram
-            </a>
-          </Button>
-
           {/* Gmail */}
           <Button
             asChild
@@ -61,20 +62,10 @@ const Contact = () => {
           >
             <a href="mailto:sutarketan35@gmail.com">
               <FaGoogle className="text-xl" />
-              sutarketan35@gmail.com
+              Email Me
             </a>
           </Button>
         </div>
-
-        {/* Avatar */}
-        <div className="mt-10 mb-5">
-          <img
-            src="/connectmeimg.png"
-            alt="Avatar"
-            className="w-40 h-auto rounded-xl"
-          />
-        </div>
-        <ContactForm />
       </section>
     </div>
   );

@@ -9,8 +9,8 @@ const Footer = () => {
   };
 
   return (
-    <div className="bg-black w-full flex justify-center">
-      <footer className="bg-yellow-600 text-white py-6 m-2 rounded-4xl w-full max-w-[calc(100%-1.5rem)] mx-3">
+    <div className="bg-black w-full h-auto flex justify-center">
+      <footer className="bg-yellow-600 text-white py-4 m-2 rounded-4xl w-full max-w-[calc(100%-1.5rem)] mx-3">
         <div className="container mx-auto px-4 flex flex-col sm:flex-row items-center justify-between text-sm">
           <p className="mb-2 sm:mb-0">
             &copy; {new Date().getFullYear()} All rights reserved. Built with

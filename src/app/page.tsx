@@ -3,7 +3,7 @@ import Homesection from "@/app/components/Home";
 import Worksection from "./components/Work";
 import Skillsection from "./components/Skills";
 import Aboutsection from "./components/About";
-import Contactsection from "./components/Contact";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
 
       <Skillsection />
       <Worksection />
-      <Contactsection />
+      <Contact />
       <Footer/>
     </div>
   );

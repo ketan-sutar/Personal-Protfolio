@@ -34,10 +34,7 @@ const Skills = () => {
       name: "Next.js",
       icon: <SiNextdotjs className="text-black dark:text-white" />,
     },
-    {
-      name: "React Hook Forms",
-      icon: <SiReacthookform className="text-pink-500" />,
-    },
+    
     { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
     { name: "Material UI", icon: <SiMui className="text-blue-400" /> },
     { name: "Git", icon: <FaGitAlt className="text-red-500" /> },
@@ -47,7 +44,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="min-h-screen bg-black py-16 px-4">
+    <section id="skills" className="min-h-auto bg-black py-16 px-4">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-white mb-12">Skills</h2>
         <div className="flex flex-wrap justify-center gap-4">
